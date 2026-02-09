@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Log in</title>
 </head>
 <body>
+<form id="MyUser">
+    <label for="mail or username"> Please enter your email or username:</label>
+    <input type="text" id="mail or username" name="mail or username">
+    <br>
+    <input type="submit" value="submit">
+</form>
     
+<script>
+    let username = null;
+    const form = document.getElementById('myUser');
+    form.addEventListener('submit', function(event){
+        event.preventDefault();
+        const text = document.getElementById('mail or username').value;
+        const password = document.getElementById('password').value;
+
+        console.log(text + password);
+
+        if(text == "Simel543" && password == "Simel543"){
+            username == text;
+
+            window.location.href = `hyraScooter.html?username=${encodeURIComponent(username)}`;
+        }
+        else {
+            alert("Fel användarnamn eller lösenord!");
+        }
+    })
+</script>
+
 </body>
 </html>
