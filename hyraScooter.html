@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title> Document</title>
+    <title> Hyra Scooter</title> 
 </head>
 <body>
     <h2 id="welcome"></h2>
@@ -23,8 +23,8 @@
         document.getElementById('welcome').innerText = `Welcome, ${username}!`;
 
 
-        const hyra = document.getElementById('hyra');
-        const Hyr5minuter = document.getElementById('Hyra5minuter');
+        const hyra = document.getElementById('Hyra');
+        const hyr5minuter = document.getElementById('Hyr5minuter');
         const hyr30minuter = document.getElementById('Hyr30minuter');
         const text = document.getElementById('output');
 
@@ -32,16 +32,16 @@
             window.location.href = 'hyraScooter.html';
         }
         else{
-            document.getElementById('hyra').addEventListener('click', function (){
-                alert('Du har hyrt en scooter. Tryck igen för att bestäma hur länge du vill hyra bilen!');
+            document.getElementById('Hyra').addEventListener('click', function (){
+                alert('Du har hyrt en scooter. Tryck igen för att bestäma hur länge du vill hyra Scootern!');
 
                 hyra.style.display = 'none';
                 hyr5minuter.style.display = 'block';
                 hyr30minuter.style.display = 'block';
             });
-            document.getElementById('välkommen').textContent = `welcome, ${username}!`;
+            document.getElementById('welcome').textContent = `Welcome, ${username}!`;
         }
-        document.getElementById('hyr5min').addEventListener('click', function(){
+        document.getElementById('Hyr5minuter').addEventListener('click', function(){
             utKr += 10;
             utText += 5;
             text.textContent = utText + "minuter = " + utKr + "Kr"

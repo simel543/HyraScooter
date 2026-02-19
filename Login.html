@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Log in</title>
 </head>
 <body>
@@ -10,12 +11,15 @@
     <label for="mail or username"> Please enter your email or username:</label>
     <input type="text" id="mail or username" name="mail or username">
     <br>
+    <label for="password">Enter your password:</label>
+    <input type="password" id="password" name="password">
+    <br>
     <input type="submit" value="submit">
 </form>
     
 <script>
     let username = null;
-    const form = document.getElementById('myUser');
+    const form = document.getElementById('MyUser');
     form.addEventListener('submit', function(event){
         event.preventDefault();
         const text = document.getElementById('mail or username').value;
@@ -24,7 +28,7 @@
         console.log(text + password);
 
         if(text == "Simel543" && password == "Simel543"){
-            username == text;
+            username = text;
 
             window.location.href = `hyraScooter.html?username=${encodeURIComponent(username)}`;
         }
